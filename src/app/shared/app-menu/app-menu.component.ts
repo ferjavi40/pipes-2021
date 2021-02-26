@@ -15,21 +15,35 @@ export class AppMenuComponent implements OnInit {
 
   ngOnInit() {
     
-    this.items = [{
-      label: 'Inicio',
-      items: [
-          {label: 'New', icon: 'pi pi-plus'},
-          {label: 'Open', icon: 'pi pi-download'},
-          {label: 'Contacto', icon: 'pi pi-phone'}
-      ]
-  },
-  {
-      label: 'Edit',
-      items: [
-          {label: 'Undo', icon: 'pi pi-refresh'},
-          {label: 'Redo', icon: 'pi pi-repeat'}
-      ]
-  }];
+    this.items = [
+      {
+        label:'Pipes de angular',
+        icon: 'pi pi-desktop',
+        items: [
+          {
+            label:'Textos y fechas',
+            icon: 'pi pi-book',
+            routerLink: '/'
+          },
+          {
+            label:'Numeros',
+            icon: 'pi pi-sort-numeric-up',
+            routerLink: 'numeros'
+          },
+          {
+            label:'No comunes',
+            icon: 'pi pi-eye-slash',
+            routerLink: 'noComunes'
+          }
+
+        ]
+      },
+      {
+        label: 'Pipes personalizados',
+        icon: 'pi pi-cog',
+        items:[]
+      }
+];
   }
 
 }
