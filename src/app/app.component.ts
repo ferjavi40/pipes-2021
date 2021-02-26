@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  saludo: string = 'hola mundo';
+  saludo: string = 'fernando ramirez';
 
   cambiarNombre() {
     console.log(this.saludo);
