@@ -1,3 +1,9 @@
-<h1>{{saludo | uppercase}}</h1>
+<div class="text-layout">
+    <h1>{{saludo | uppercase}}</h1>
+</div>
 
-<button (click)="cambiarNombre()">Cambiar nombre</button>
+
+
+<button (click)="cambiarNombre()" pButton type="button" label="Cambiar nombre" class="p-button-outlined"></button>
+
+<p-button (click)="cambiarNombre()" label="Cambiar nombre"></p-button>
