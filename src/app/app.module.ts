@@ -5,6 +5,8 @@ import { VentasModule } from './ventas/ventas.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
+//rutas
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -15,9 +17,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     VentasModule,
     SharedModule,
     PrimeNgModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
