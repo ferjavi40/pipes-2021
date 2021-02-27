@@ -9,7 +9,7 @@ import {MenuItem} from 'primeng/api';
 })
 export class AppMenuComponent implements OnInit {
 
-  public items: MenuItem[] = [];
+  public items: MenuItem [] = [];
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class AppMenuComponent implements OnInit {
     
     this.items = [
       {
-        label:'Pipes de angular',
+        label:'Pipes de Angular',
         icon: 'pi pi-desktop',
         items: [
           {
@@ -27,7 +27,7 @@ export class AppMenuComponent implements OnInit {
           },
           {
             label:'Numeros',
-            icon: 'pi pi-sort-numeric-up',
+            icon: 'pi pi-dollar',
             routerLink: 'numeros'
           },
           {
@@ -40,8 +40,7 @@ export class AppMenuComponent implements OnInit {
       },
       {
         label: 'Pipes personalizados',
-        icon: 'pi pi-cog',
-        items:[]
+        icon: 'pi pi-cog'
       }
 ];
   }
