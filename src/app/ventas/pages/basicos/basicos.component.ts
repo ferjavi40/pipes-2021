@@ -1,4 +1,10 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable} from 'rxjs';
+
+import { RelojServiceService } from '../../services/reloj-service.service';
+
+
+
 
 
 
@@ -7,12 +13,21 @@ import { Component} from '@angular/core';
   templateUrl: './basicos.component.html',
   styleUrls: ['./basicos.component.css']
 })
-export class BasicosComponent  {
+export class BasicosComponent implements OnInit  {
 
   nombreLower: string = 'FERNANDO';
   nombreUpper: string = 'fernando';
   nombreCompleto: string = 'FerNAnDO RaMirEZ';
 
-  fecha: Date = new Date();
+  fecha: number = Date.now();
+  Uhr:Observable<Date>;
+
+  constructor( private relojServicio:RelojServiceService ){
+
+  }
+
+  ngOnInit() {
+    this.Uhr= this.relojServicio.getCurrentTime();
+  }
 
 }
