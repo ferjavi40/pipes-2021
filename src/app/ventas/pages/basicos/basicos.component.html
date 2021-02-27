@@ -39,3 +39,41 @@
 
 </div>
 
+<div class="text-layout p-text-center">
+
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipes para mostrar las fechas.
+    </p>
+
+</div>
+
+<div class="p-grid">
+
+    <div class="p-col-12 p-md-12 p-lg-6">
+        <p-card header="" [subheader]="">
+
+            <ul>
+                <li>Fecha</li>
+                <li>Fecha | date 'short'</li>
+                <li>Fecha | date 'medium'</li>
+            </ul>
+            
+        </p-card>
+
+    </div>
+
+    <div class="p-col-12 p-md-12 p-lg-6">
+        <p-card header="" [subheader]="">
+
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date: 'short' }}</li>
+                <li>{{fecha | date: 'medium' }}</li>
+            </ul>
+            
+        </p-card>
+
+    </div>
+</div>
+
