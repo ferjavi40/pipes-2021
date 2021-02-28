@@ -7,7 +7,7 @@ import {  map } from 'rxjs/operators';
 })
 export class RelojServiceService {
 
-  private clock: Observable<Date>;
+  clock: Observable < Date >;
 
   constructor() { 
     this.clock = interval(1000).pipe(map(() => new Date()));

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 //prime
 import {MenuItem} from 'primeng/api';
+import { RelojServiceService } from '../../ventas/services/reloj-service.service';
 
 @Component({
   selector: 'app-app-menu',
@@ -10,8 +12,10 @@ import {MenuItem} from 'primeng/api';
 export class AppMenuComponent implements OnInit {
 
   public items: MenuItem [] = [];
+  public uhr: Observable < Date >;
 
-  constructor() { }
+
+  constructor( private _relojService: RelojServiceService) { }
 
   ngOnInit() {
     
@@ -43,6 +47,10 @@ export class AppMenuComponent implements OnInit {
         icon: 'pi pi-cog'
       }
 ];
+
+
+  this.uhr= this._relojService.getCurrentTime();
+
   }
 
 }

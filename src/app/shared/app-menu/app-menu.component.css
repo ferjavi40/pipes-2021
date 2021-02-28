@@ -1,0 +1,11 @@
+
+img{
+    height: 40px;
+    margin-left: 1em;
+}
+
+.container{
+    display: inline-flex;
+    align-items: center;
+    
+}
