@@ -9,22 +9,22 @@
 
 
 <div class="p-grid p-text-center">
-    <div class="p-col-4">
+    <div class="p-col-12 p-md-12 p-lg-4">
         <p-card header="Ventas netas" subheader="del presente año.">
             <i class="pi pi-euro"></i>
             {{ventasNetas | number: '1.2-2': 'es-CR'}}
         </p-card>
     </div>
 
-    <div class="p-col-4">
-        <p-card header="">
-
+    <div class="p-col-12 p-md-12 p-lg-4">
+        <p-card header="Ventas brutas" subheader="del ultimo semestre">
+            {{ventasNetas + 2000000 | currency : 'EUR'}}
         </p-card>
     </div>
 
-    <div class="p-col-4">
-        <p-card header="">
-
+    <div class="p-col-12 p-md-12 p-lg-4">
+        <p-card header="Porcentaje de ganancias" subheader="del presente año">
+            {{porcentaje | percent: '2.2-2' }}
         </p-card>
     </div>
 
