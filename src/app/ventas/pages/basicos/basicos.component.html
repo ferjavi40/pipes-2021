@@ -60,6 +60,14 @@
                 <li>Fecha | date using observable and service 'medium'</li>
                 <li>Fecha | date Personalizada</li>
             </ul>
+
+            <hr>
+
+            <ul>
+                <li> fecha | date: 'long': 'GMT+2' </li>
+                <li> fecha | date: 'long': 'GMT' </li>
+                <li> fecha | date: 'long': 'GMT+12:00' </li>
+            </ul>
             
         </p-card>
 
@@ -72,8 +80,16 @@
                 <li>{{fecha | date: 'long'}}</li>
                 <li>{{fecha | date: 'short' }}</li>
                 <li>{{fecha | date: 'fullDate' }}</li>
-                <li>{{ Uhr | async | date: 'medium'}}</li>
+                <li>{{ Uhr | async | date: 'medium': 'GMT+2'}}</li>
                 <li>{{fecha | date: 'GGGGG, MMMM, YY, ww, EEEEEE'}}</li>
+            </ul>
+
+            <hr>
+            
+            <ul>
+                <li> {{fecha | date: 'long': 'GMT+2'}} </li>
+                <li> {{fecha | date: 'long': 'GMT'}} </li>
+                <li> {{fecha | date: 'long': 'GMT+12:00': 'de'}} </li>
             </ul>
             
         </p-card>

@@ -9,8 +9,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 //cambiar el idioma  local de la app de manera global
 import  localeEs  from '@angular/common/locales/es';
+import  localeDe  from '@angular/common/locales/de';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData( localeEs );
+registerLocaleData( localeDe );
 
 
 
