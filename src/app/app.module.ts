@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
 import { VentasModule } from './ventas/ventas.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 //rutas
@@ -25,6 +26,7 @@ registerLocaleData( localeDe );
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     VentasModule,
     SharedModule,
     PrimeNgModule
