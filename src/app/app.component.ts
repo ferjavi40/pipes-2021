@@ -8,15 +8,10 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent implements OnInit {
   
-  saludo: string = 'fernando ramirez';
 
-  constructor( private primengConfig: PrimeNGConfig) {
 
-  }
+  constructor( private primengConfig: PrimeNGConfig) {}
 
-  cambiarNombre() {
-    console.log(this.saludo);
-  }
 
   ngOnInit(): void {
     this.primengConfig.ripple = true;

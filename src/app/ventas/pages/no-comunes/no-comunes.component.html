@@ -9,19 +9,22 @@
 
 
 <div class="p-grid">
-    <div class="p-col p-md-6">
-        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true"  >
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas odit nisi consequuntur eius architecto
-                dolores eligendi sequi ipsam inventore, sapiente ullam repudiandae cum sit ex culpa pariatur obcaecati
-                vero laborum?</p>
+    <div class="p-col p-md-6 p-sm-12">
+        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+            <p>
+                Saludos {{nombre}} es un honor para nosotros {{genero | i18nSelect:invitacionMapa}} a nuestro evento de hoy!
+            </p>
+            <button (click)="cambiarPersona()" pButton pRipple type="button" label="Primary" class="p-button-rounded">Cambiar persona</button>
         </p-fieldset>
     </div>
 
-    <div class="p-col p-md-6">
-        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true" >
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas odit nisi consequuntur eius architecto
-                dolores eligendi sequi ipsam inventore, sapiente ullam repudiandae cum sit ex culpa pariatur obcaecati
-                vero laborum?</p>
+    <div class="p-col p-md-6 p-sm-12">
+        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+            <p>
+                Actualmente  {{clientes.length | i18nPlural: clientesMapa}} 
+            </p>
+            <button (click)="agregarPersona()" pButton pRipple type="button" label="Primary" class="p-button-rounded">Agregar cliente</button>
+            <button (click)="eliminarPersona()" pButton pRipple type="button" label="Primary" class="p-button-rounded">Eliminar cliente</button>
         </p-fieldset>
     </div>
 </div>

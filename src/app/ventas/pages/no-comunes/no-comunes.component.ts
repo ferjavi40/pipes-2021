@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -6,10 +6,40 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './no-comunes.component.html',
   styleUrls: ['./no-comunes.component.css']
 })
-export class NoComunesComponent implements OnInit {
+export class NoComunesComponent {
 
-  constructor( ) { }
 
-  ngOnInit(): void {}
+  //i18Select 
+  nombre: string = 'Fernando';
+  genero: string = 'masculino'
+
+  invitacionMapa = {
+    'masculino': 'invitarlo',
+    'femenino': 'invitarla'
+  }
+
+  //i18nPlural
+
+  clientes: string[] = [];
+  clientesMapa = {
+    '=0': 'no tenemos clientes esperando.',
+    '=1': 'tenemos 1 cliente esperando.',
+    '=2': 'tenemos 2 clientes esperando.',
+    '=3': 'tenemos 3 clientes esperando',
+    'other': 'Tenemos # clientes esperando'
+  }
+
+  cambiarPersona(){
+    this.nombre='Marina';
+    this.genero='femenino';
+  }
+
+  agregarPersona(){
+    this.clientes.push('Juan');
+  }
+
+  eliminarPersona(){
+    this.clientes.pop();
+  }
 
 }
