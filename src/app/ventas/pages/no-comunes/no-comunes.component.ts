@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class NoComunesComponent {
 
   //i18nPlural
 
-  clientes: string[] = ['mario', 'andres', 'Josue', 'Iñaki','Marcelo'];
+  clientes: string[] = ['mario', 'andres', 'Josue', 'Iñaki', 'Marcelo'];
   clientesMapa = {
     '=0': 'no tenemos clientes esperando.',
     '=1': 'tenemos 1 cliente esperando.',
@@ -29,17 +30,57 @@ export class NoComunesComponent {
     'other': 'Tenemos # clientes esperando'
   }
 
-  cambiarPersona(){
-    this.nombre='Marina';
-    this.genero='femenino';
+  cambiarPersona() {
+    this.nombre = 'Marina';
+    this.genero = 'femenino';
   }
 
-  agregarPersona(){
+  agregarPersona() {
     this.clientes.push('Juan');
   }
 
-  eliminarPersona(){
+  eliminarPersona() {
     this.clientes.pop();
   }
+
+  //key value piepe
+
+  persona = {
+    nombre: 'Fernando',
+    edad: 35,
+    direccion: 'Esteli, Nicaragua'
+  }
+
+  //json Pipe
+
+  heroes = [
+    {
+      nombre: 'superman',
+      vuela: false
+    },
+    {
+      nombre: 'batman',
+      vuela: true
+    },
+    {
+      nombre: 'antman',
+      vuela: false
+    },
+    {
+      nombre: 'Robin',
+      vuela: true
+    }
+  ]
+
+  //async Pipe
+
+  miObservable = interval(1000);
+
+  valorPromesa = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+      resolve('Tenemos data de la promesa!');
+    }, 3500)
+  });
 
 }

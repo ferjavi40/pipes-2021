@@ -12,19 +12,23 @@
     <div class="p-col p-md-6 p-sm-12">
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
             <p>
-                Saludos {{nombre}} es un honor para nosotros {{genero | i18nSelect:invitacionMapa}} a nuestro evento de hoy!
+                Saludos {{nombre}} es un honor para nosotros {{genero | i18nSelect:invitacionMapa}} a nuestro evento de
+                hoy!
             </p>
-            <button (click)="cambiarPersona()" pButton pRipple type="button" label="Primary" class="p-button-rounded">Cambiar persona</button>
+            <button (click)="cambiarPersona()" pButton pRipple type="button" label="Primary"
+                class="p-button-rounded">Cambiar persona</button>
         </p-fieldset>
     </div>
 
     <div class="p-col p-md-6 p-sm-12">
         <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
             <p>
-                Actualmente  {{clientes.length | i18nPlural: clientesMapa}} 
+                Actualmente {{clientes.length | i18nPlural: clientesMapa}}
             </p>
-            <button (click)="agregarPersona()" pButton pRipple type="button" label="Primary" class="p-button-rounded">Agregar cliente</button>
-            <button (click)="eliminarPersona()" pButton pRipple type="button" label="Primary" class="p-button-rounded">Eliminar cliente</button>
+            <button (click)="agregarPersona()" pButton pRipple type="button" label="Primary"
+                class="p-button-rounded">Agregar cliente</button>
+            <button (click)="eliminarPersona()" pButton pRipple type="button" label="Primary"
+                class="p-button-rounded">Eliminar cliente</button>
         </p-fieldset>
     </div>
 
@@ -40,4 +44,44 @@
             <pre>{{clientes | slice:2:4}}</pre>
         </p-fieldset>
     </div>
+
+    <div class="p-col p-md-6 p-sm-12">
+        <p-fieldset legend="Keyvalue pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let item of persona | keyvalue">
+                    <b>{{item.key | titlecase}}:</b> {{item.value}}
+                </li>
+            </ul>
+
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6 p-sm-12">
+        <p-fieldset legend="Json pipe" [toggleable]="true">
+            <pre>
+                {{heroes|json}}
+            </pre>
+
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6 p-sm-12">
+        <p-fieldset legend="Async pipe" [toggleable]="true">
+
+            <pre>
+                {{miObservable|async}}
+            </pre>
+            <!-- Se pone en parentesis lo del enif para que se niegue tambien el async -->
+            <pre *ngIf="!(valorPromesa|async)">
+                Mostrando la data de la promesa
+            </pre>
+
+            <pre>
+                {{valorPromesa | async}}
+            </pre>
+
+        </p-fieldset>
+    </div>
+
+
 </div>
