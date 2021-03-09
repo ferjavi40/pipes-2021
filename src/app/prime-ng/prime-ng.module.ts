@@ -5,6 +5,9 @@ import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {FieldsetModule} from 'primeng/fieldset';
 import {MenubarModule} from 'primeng/menubar';
+import{SplitButtonModule}from'primeng/splitbutton';
+import {TableModule} from 'primeng/table';
+import {ToolbarModule} from 'primeng/toolbar';
 
 
 //no es necesario importar los modulos del primeNG, basta solo con  exportarlos
@@ -18,7 +21,10 @@ import {MenubarModule} from 'primeng/menubar';
     ButtonModule,
     CardModule,
     FieldsetModule,
-    MenubarModule
+    MenubarModule,
+    SplitButtonModule,
+    ToolbarModule,
+    TableModule
   ]
 })
 export class PrimeNgModule { }

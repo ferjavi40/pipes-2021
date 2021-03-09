@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 
 
 
@@ -7,16 +8,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ordenar.component.html',
   styleUrls: ['./ordenar.component.css']
 })
-export class OrdenarComponent implements OnInit {
+export class OrdenarComponent  {
 
   nombre: string = "fernando javier";
-
   enMayusculas: boolean= true;
 
-  constructor() { }
+  heroes: any[];
 
-  ngOnInit(): void {
-  }
+
 
   hacerMayusculas() {
     if(this.enMayusculas){
