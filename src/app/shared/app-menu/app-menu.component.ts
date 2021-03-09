@@ -44,7 +44,8 @@ export class AppMenuComponent implements OnInit {
       },
       {
         label: 'Pipes personalizados',
-        icon: 'pi pi-cog'
+        icon: 'pi pi-cog',
+        routerLink: 'ordenar'
       }
 ];
 

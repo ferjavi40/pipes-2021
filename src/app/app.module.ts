@@ -5,6 +5,7 @@ import { VentasModule } from './ventas/ventas.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { AppComponent } from './app.component';
 //rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +30,8 @@ registerLocaleData( localeDe );
     BrowserAnimationsModule,
     VentasModule,
     SharedModule,
-    PrimeNgModule
+    PrimeNgModule,
+    
     
   ],
   providers: [
