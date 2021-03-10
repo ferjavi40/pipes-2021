@@ -9,62 +9,68 @@ import { Color, heroesInterface } from '../../interfaces/heroes';
   templateUrl: './ordenar.component.html',
   styleUrls: ['./ordenar.component.css']
 })
-export class OrdenarComponent  {
+export class OrdenarComponent {
 
   nombre: string = "fernando javier";
-  enMayusculas: boolean= true;
+  enMayusculas: boolean = true;
+
+  odenarPor: string = '';
 
   heroes: heroesInterface[] = [
     {
-      nombre:'Batman',
+      nombre: 'Batman',
       vuela: true,
       color: Color.negro
     },
     {
-      nombre:'Aquaman',
+      nombre: 'Aquaman',
       vuela: false,
       color: Color.verde
     },
     {
-      nombre:'Robin',
+      nombre: 'Robin',
       vuela: true,
       color: Color.rojo
     },
     {
-      nombre:'superman',
+      nombre: 'superman',
       vuela: true,
       color: Color.verde
     },
     {
-      nombre:'Spiderman',
+      nombre: 'Spiderman',
       vuela: false,
       color: Color.rojo
     },
     {
-      nombre:'Duende verde',
+      nombre: 'Duende verde',
       vuela: true,
       color: Color.verde
     },
     {
-      nombre:'Silver surfer',
+      nombre: 'Silver surfer',
       vuela: false,
       color: Color.negro
-    },    {
-      nombre:'Deadpool',
+    }, {
+      nombre: 'Deadpool',
       vuela: true,
       color: Color.azul
     },
   ];
 
 
-
   hacerMayusculas() {
-    if(this.enMayusculas){
-      this.enMayusculas= false
-    }else{
-      this.enMayusculas= true;
+    if (this.enMayusculas) {
+      this.enMayusculas = false
+    } else {
+      this.enMayusculas = true;
     }
 
+  }
+
+  cambiarOrden(valor:string) {
+    this.odenarPor= valor;
+    console.log('este:',valor)
   }
 
 
